@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+<div>
+
+  
+    <header class="hlavicka"> 
+       
+        <a href="/index.html">
+            <img src="/images/logo.jpg" width="60px" height="auto" alt="logo" style="border-radius: 10%;">
+        </a>
+      
+
+        
+        <input type="checkbox" class="menu__checkbox" id="menu__checkbox">
+        <label for="menu__checkbox" class="menu__toggler">☰ Menu</label>
+        
+        <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link" href="/about/">O nás</a></li>
+            <li class="menu__item"><a class="menu__link" href="/curse/">Kurzy</a></li>
+            <li class="menu__item"><a class="menu__link" href="/project/">Projekty</a></li>
+            <li class="menu__item"><a class="menu__link" href="/contact/">Kontakty</a></li>
+        </ul>
+        
+        </nav>
+ 
+        </header>
+
+        {{ content | safe }}
+
+
+
+
+        <h3>Naši partneři:</h3>
+
+        <footer class="footer">
+            <figure class="image-with-title">
+                    <img src="/images/Abraka.png" width="40px" height="30px" alt="Abraka-logo">
+                    <span class="image-title">Abraka Dabra debatní kroužek</span>
+            
+                        </figure>
+                        <figure class="image-with-title">
+                <img src="/images/msmt.png" width="40px" height="30px" alt="msmt-logo">
+                <span class="image-title">To jsem ti tu nástěnku chtěl svěřit </span>
+            </figure>
+    
+       <figure class="image-with-title">
+                <img src="/images/Just.jpeg" width="40px" height="30px" alt="Just-logo">
+                <span class="image-title">Just do It ToDay </span>
+            </figure>
+    
+    </footer>
+    <p class="copyright"> @ copyrigh 2024 Děti ze zadních lavic </p>
+    
+    
+    </div>
+    </body>
+    </html>
+    
+
