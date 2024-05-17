@@ -1,0 +1,504 @@
+/* Základní styly */
+html {
+    box-sizing: border-box;
+    border: solid 1px rgb(178, 172, 172);
+    margin:0;
+    padding: 10px;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+  height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; /* Zvětšení velikosti písma pro lepší čitelnost na mobilních zařízeních */
+    line-height: 1.5;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color:white;
+    overflow: visible;
+    font-family:'Courier Prime', 'Playpen Sans', sans-serif;
+
+}
+
+.container {
+    width: 100%; /* Přidáno pro mobilní verzi */
+    margin: 20px auto; /* Zdůraznění responsivity */
+    padding: 0 20px; /* Odsazení obsahu od okrajů */}
+
+
+.logo-title {
+    font-size: 24px; /* Velikost písma pro logo */
+    text-align: center; /* Umístění textu na levou stranu */
+}
+
+h1 {
+    font-size: 24px; /* Velikost písma pro h2 */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center; /* Umístění textu na levou stranu */
+    font-family: 'Courier Prime', 'Playpen Sans', sans-serif;
+}
+
+h2 {
+    font-size: 16px; /* Velikost písma pro h2 */
+    margin-bottom: 50px;
+    font-family: 'Courier Prime', 'Playpen Sans', sans-serif;
+}
+
+h3 {
+    font-size: 12px; /* Velikost písma pro h3 */
+    margin: 0;
+    padding: 0; /* Přidání nulového odsazení */
+}
+
+.hero-image {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    position: relative; /* Přidáno */
+  
+}
+
+.hero-image img {
+    width: calc(100% / 3);
+    height: 300px;
+    object-fit: cover;
+    padding: 5px;
+    position: relative; /* Přidáno */
+    z-index: -1; /* Nastaví obrázku nižší pořadí vrstvy než textu */
+   
+}
+
+
+.text-main {
+    font-size: 14px;
+    padding: 10px;
+    text-align: justify;
+    position: relative; /* Přidáno */
+    z-index: 1; 
+}
+
+.text__slogan {
+    font-size: 12px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.hlavicka {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 2px solid #9e9696;
+    background-color: rgb(119, 148, 193);
+    color: white;
+}
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px; /* Zvětšená mezera mezi položkami */
+    border-right: 2px solid white;
+    
+}
+
+.menu li:last-child {
+    border-right: none;
+    margin-right: 5px; /* Resetování marginu pro poslední položku */
+    padding-right: 0; /* Resetování vnitřního odsazení pro poslední položku */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li:hover {
+    transform: scale(1.1); /* Zvětšení o 10 % */
+    transition: transform 0.3s ease; /* Plynulý přechod */
+    background-color: #a7a6ac; /* Barva pozadí při najetí myší */
+}
+
+h3 {
+    text-align: start;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0; /* Odstranění mezery pod nadpisem */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 2px solid #1e1b1b;
+    background-color: #c0bdbd;
+    text-align: center;
+}
+
+.footer figure {
+    margin: 0 10px;
+}
+
+.image-with-title {
+    display: flex;
+    align-items: center;
+}
+
+.image-with-title img {
+    margin-right: 10px; /* Mezera mezi obrázkem a názvem */
+}
+
+.image-title {
+    font-size: 12px; /* Velikost písma pro název obrázku */
+}
+
+.copyright {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(239, 239, 239);
+}
+
+/* Hamburger menu */
+.menu__checkbox {
+    display: none; /* Schování checkboxu */
+}
+
+.menu__toggler {
+    cursor: pointer; 
+    display: flex;
+    align-items: center; /* Zarovnání obsahu na střed vertikálně */
+    margin-right: 10px; /* Mezera mezi hamburgerem a menu */
+    flex-direction: row; /* Obrácení směru zobrazení */
+}
+
+.menu__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: rgb(119, 148, 193);
+}
+
+.menu__item {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.menu__link {
+    display: block;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu__link:hover {
+    background-color: #9e9696;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .menu li {
+        display: block;
+        margin-bottom: 10px; /* Mezera mezi jednotlivými položkami pro lepší čitelnost na mobilních zařízeních */
+    }
+
+    .menu a {
+        display: block;
+    }
+
+    .menu__toggler {
+        display: none;
+    }
+
+    .menu__list {
+        display: flex !important;
+    }
+
+    .menu__item {
+        border-bottom: none;
+        border-right: 1px solid rgb(255, 255, 255);
+    }
+}
+
+/* Media queries */
+@media screen and (max-width: 767px) {
+    .hero-image img {
+        width: 100%; /* Zajišťuje, že obrázky nebudou širší než jejich kontejner */
+        display: none; /* Skryje všechny obrázky pro mobilní verzi */
+    }
+    .hero-image img:first-child {
+        display: block; /* Zobrazí první obrázek pro mobilní verzi */
+     
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer figure {
+        margin-bottom: 5px;
+    }
+    .image-with-title img {
+        display: flex;
+    }
+}
+
+/* Desktop verze */
+@media screen and (min-width: 1279px) {
+    .container {
+        margin: 20px auto; /* Zde upravte podle potřeby */
+    }
+
+    .hero-image {
+        max-width: 100%; /* Šířka obrázku */
+        height: 450px; /* Výška obrázku */
+    }
+}
+
+/* tablet verze */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero-image {
+        display: flex;
+        flex-direction: row; /* Obrázky se zobrazí vedle sebe */
+        flex-wrap: nowrap; /* Zajistí, aby se nezalamovaly na další řádek */
+        align-items: center; /* Zarovná obrázky na střed vertikálně */
+    }
+
+    .hero-image img:nth-of-type(-n+2) {
+        width: 100%; /* První dva obrázky se zobrazí na celou šířku stránky */
+        height: auto; /* Zachování poměru stran */
+    }
+
+    .hero-image img:nth-of-type(n+3) {
+        display: none; /* Schová třetí a další obrázky pro tabletovou verzi */
+    }
+}
+
+
+/*kontaktni adres mobilní verze*/
+
+
+.contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background-color:#e0dbdb;
+    border-radius: 10px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.map__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.mapa {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+
+/* mobilni verze kontakt adresy - media queries*/
+
+@media only screen and (max-width: 728px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .map__item {
+      height: 300px; /* Snížení výšky na mobilních zařízeních */
+    }
+  
+    .mapa {
+      border-radius: 5px;
+    }
+
+}
+
+/* Desktop verze kontakty */
+@media screen and (min-width: 1279px) {
+    .contact__grid {
+        margin: 20px auto; /* Zde upravte podle potřeby */
+    }
+
+    .map__item  {
+        max-width: 100%; /* Šířka obrázku */
+        height: 450px; /* Výška obrázku */
+    }
+
+    .footer .h3 {
+        margin-top: 100px;
+
+    }
+}
+  
+/* Základní styly */
+.container__form {
+    max-width: 100%; /* Šířka obsahu natáhnutá na celou stránku */
+    display: block;
+   border: solid 1px rgb(178, 172, 172);
+   background-color: #e8dfdf;
+    border-radius: 5px;
+}
+
+/* Styly pro formulář */
+.form-group {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 20px 30px;
+    background-color: #5b7b9d;
+  font-weight: bold;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #183c63;
+}
+
+/* Media query pro desktop verzi formulář */
+@media screen and (min-width: 1279px) {
+    .container__form {
+        margin: 20px auto; /* Zde upravte podle potřeby */
+        max-width: 100%; /* Šířka obrázku */
+    }
+
+    .form-group {
+        max-width: 100%; /* Šířka obrázku */
+    
+    }
+
+}
+
+
+/* css pro about */
+
+.hero__about{
+    display: block;
+    width: 600px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 5px;
+    align-items: center;
+    justify-content: center; 
+}
+.hero__about:hover {
+    transform: scale(1.1); /* Zvětšení o 10 % */
+    transition: transform 0.3s ease; /* Plynulý přechod */
+          
+}
+
+.about__text {
+    display: block;
+  margin: 80px;
+  margin-top: -80px;
+  padding: 5px;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+/* Styly pro formulář */
+.form-group {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* css style send*/
+.hero__send {
+    display: block; /* Použití flexboxu */
+    align-items: center; /* Zarovnání obsahu vertikálně na střed */
+    justify-content: center; /* Zarovnání obsahu horizontálně na střed */
+    width: 600px;
+    height: 500px;
+    margin: 20px;
+    padding: 5px;
+}
+
+/* css styl pro support */
+
+.hero__support img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    padding: 5px;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 10px;
+
+}
